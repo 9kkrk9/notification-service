@@ -1,0 +1,71 @@
+{
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint",
+      "unused-imports"
+    ],
+    "rules": {
+        "linebreak-style": ["error", "windows"],
+        "@typescript-eslint/no-unused-vars": ["error", {
+  "argsIgnorePattern": "^_" }],
+        "@typescript-eslint/no-explicit-any": "warn",
+        "no-async-promise-executor": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/no-non-null-assertion":"off",
+        "no-await-in-loop": ["off"],
+        "no-param-reassign":["off"],
+        "prefer-destructuring":["off"],
+        "camelcase":["off"],
+        "import/extensions": ["off"],
+        "import/no-unresolved": ["off"],
+        "semi": ["error", "always"],
+        "no-extra-semi": ["off"],
+        "no-multi-spaces": ["error"],
+        "no-underscore-dangle": ["off"],
+        "class-methods-use-this":["off"],
+        "max-len": ["warn", { "code": 100, "tabWidth":
+  2,"ignoreComments": true }],
+        "import/prefer-default-export": ["off"],
+        "operator-linebreak" : ["error", "before"],
+        "no-restricted-syntax": ["off", "WithStatement"],
+        "no-shadow": "off",
+        "radix": "off",
+        "no-plusplus":"off",
+        "consistent-return": "off",
+        "dot-notation": "off",
+        "prefer-template": ["error"],
+        "quotes": ["error", "single",{ "avoidEscape": true,
+        "allowTemplateLiterals": true }],
+        "no-undef": ["off"],
+        "unused-imports/no-unused-imports": "error",
+        "eol-last": ["error", "always"],
+        "sort-imports": [
+            "error",
+            {
+              "ignoreDeclarationSort": true
+            }
+        ]
+    },
+    "overrides": [
+      {
+        "files": ["*.json"],
+        "rules": {
+          "quotes": "off",
+          "semi": "off",
+          "linebreak-style": "off"
+        }
+      }
+    ]
+  }
